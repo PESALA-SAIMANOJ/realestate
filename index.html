@@ -11,10 +11,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">DID Realty</div>
+            <div class="nav-brand"><i class="fas fa-building"></i> DID Realty</div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#catalogue" class="nav-link">Catalogue</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -26,7 +28,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Find Your Dream Property</h1>
@@ -34,6 +36,13 @@
             <button class="cta-button">Explore Properties</button>
         </div>
         <div class="hero-overlay"></div>
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
     </section>
 
     <!-- Search Section -->
@@ -56,25 +65,99 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Our Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Award Winning Agency</h3>
+                    <p>Recognized as the Best Real Estate Agency for 5 consecutive years</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <h3>5-Star Rating</h3>
+                    <p>Maintained 4.9/5 stars from over 10,000 satisfied customers</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global Presence</h3>
+                    <p>Operating in 25+ countries with a network of professional agents</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Industry Leaders</h3>
+                    <p>Pioneering innovative solutions in real estate technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Statistics Section -->
     <section class="statistics">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card" data-target="500">
+                    <div class="stat-icon"><i class="fas fa-home"></i></div>
                     <h3 class="stat-number">500+</h3>
                     <p class="stat-label">Properties Listed</p>
                 </div>
                 <div class="stat-card" data-target="1000">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
                     <h3 class="stat-number">1000+</h3>
                     <p class="stat-label">Happy Clients</p>
                 </div>
                 <div class="stat-card" data-target="50">
+                    <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
                     <h3 class="stat-number">50+</h3>
                     <p class="stat-label">Expert Agents</p>
                 </div>
-                <div class="stat-card" data-target="10">b
+                <div class="stat-card" data-target="10">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
                     <h3 class="stat-number">$10B+</h3>
                     <p class="stat-label">Total Value Transacted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section id="catalogue" class="catalogue">
+        <div class="container">
+            <h2 class="section-title">Property Catalogues</h2>
+            <div class="catalogue-grid">
+                <div class="catalogue-card">
+                    <div class="catalogue-image">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Luxury Apartments</h3>
+                    <p>Premium residential apartments in prime locations</p>
+                    <button class="catalogue-btn">View Catalogue</button>
+                </div>
+                <div class="catalogue-card">
+                    <div class="catalogue-image">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Villas & Houses</h3>
+                    <p>Spacious villas with modern amenities</p>
+                    <button class="catalogue-btn">View Catalogue</button>
+                </div>
+                <div class="catalogue-card">
+                    <div class="catalogue-image">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Commercial Spaces</h3>
+                    <p>Strategic business locations and office spaces</p>
+                    <button class="catalogue-btn">View Catalogue</button>
+                </div>
+                <div class="catalogue-card">
+                    <div class="catalogue-image">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Beach Properties</h3>
+                    <p>Exclusive beachfront and coastal properties</p>
+                    <button class="catalogue-btn">View Catalogue</button>
                 </div>
             </div>
         </div>
@@ -86,7 +169,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About DID Realty</h2>
-                    <p>We are a premium real estate agency dedicated to helping clients find their perfect properties. With over 20 years of experience in the industry, we pride ourselves on offering exceptional service and expert guidance.</p>
+                    <p>We are a premium real estate agency dedicated to helping clients find their perfect properties. With over 20 years of experience in the industry, we pride ourselves on offering exceptional service and unmatched expertise.</p>
                     <p>Our team of experienced agents is committed to understanding your unique needs and finding the ideal property that matches your lifestyle and investment goals.</p>
                     <div class="about-features">
                         <div class="feature">
@@ -108,7 +191,9 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="placeholder-image"></div>
+                    <div class="placeholder-image">
+                        <i class="fas fa-image"></i>
+                    </div>
                 </div>
             </div>
         </div>

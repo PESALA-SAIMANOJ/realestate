@@ -8,7 +8,8 @@ const properties = [
         beds: 4,
         baths: 3,
         sqft: "3,500 sq ft",
-        icon: "🏠"
+        icon: "🏠",
+        image: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
         id: 2,
@@ -18,7 +19,8 @@ const properties = [
         beds: 2,
         baths: 2,
         sqft: "1,200 sq ft",
-        icon: "🏢"
+        icon: "🏢",
+        image: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
         id: 3,
@@ -28,7 +30,8 @@ const properties = [
         beds: 5,
         baths: 4,
         sqft: "5,000 sq ft",
-        icon: "🌴"
+        icon: "🌴",
+        image: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     },
     {
         id: 4,
@@ -38,7 +41,8 @@ const properties = [
         beds: 3,
         baths: 2.5,
         sqft: "2,200 sq ft",
-        icon: "🏡"
+        icon: "🏡",
+        image: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
     },
     {
         id: 5,
@@ -48,7 +52,8 @@ const properties = [
         beds: 0,
         baths: 2,
         sqft: "3,000 sq ft",
-        icon: "🏗️"
+        icon: "🏗️",
+        image: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     },
     {
         id: 6,
@@ -58,7 +63,8 @@ const properties = [
         beds: 1,
         baths: 1,
         sqft: "650 sq ft",
-        icon: "🎨"
+        icon: "🎨",
+        image: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     }
 ];
 
@@ -75,6 +81,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 document.addEventListener('DOMContentLoaded', () => {
     renderProperties(properties);
     setupEventListeners();
+    observeCounters();
 });
 
 // Render properties
@@ -85,8 +92,8 @@ function renderProperties(props) {
         card.className = 'property-card';
         card.style.animationDelay = `${index * 0.1}s`;
         card.innerHTML = `
-            <div class="property-image">
-                ${property.icon}
+            <div class="property-image" style="background: ${property.image}; position: relative;">
+                <span style="font-size: 4rem; position: relative; z-index: 2;">${property.icon}</span>
             </div>
             <div class="property-info">
                 <h3 class="property-title">${property.title}</h3>
@@ -154,15 +161,12 @@ function setupEventListeners() {
         alert('Thank you for your message! We will contact you soon.');
         contactForm.reset();
     });
-
-    // Counter animation
-    observeCounters();
 }
 
 // View property details
 function viewProperty(propertyId) {
     const property = properties.find(p => p.id === propertyId);
-    alert(`Property Details:\n\nTitle: ${property.title}\nLocation: ${property.location}\nPrice: ${property.price}\n\nContact us for more information!`);
+    alert(`Property Details:\n\nTitle: ${property.title}\nLocation: ${property.location}\nPrice: ${property.price}\nBeds: ${property.beds}\nBaths: ${property.baths}\n\nContact us for more information!`);
 }
 
 // Observe and animate counters
@@ -214,3 +218,11 @@ function loadMoreProperties() {
     console.log('Loading more properties...');
     // Add more properties logic here
 }
+
+// Catalogue button functionality
+document.querySelectorAll('.catalogue-btn').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        const catalogueNames = ['Luxury Apartments', 'Villas & Houses', 'Commercial Spaces', 'Beach Properties'];
+        alert(`Viewing ${catalogueNames[index]} catalogue...\n\nThis will open a detailed catalogue with more properties.`);
+    });
+});
